@@ -27,6 +27,25 @@ const nameInput = document.querySelector('.contact input[name="name"]');
 const emailInput = document.querySelector('.contact input[name="email"]');
 const messageInput = document.querySelector('.contact textarea[name="message"]');
 
+// Modal functionality
+const contactBtn = document.getElementById('contact-btn');
+const modal = document.getElementById('contact-modal');
+const closeModal = document.getElementById('close-modal');
+
+contactBtn.addEventListener('click', () => {
+    modal.style.display = 'block';
+});
+
+closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 

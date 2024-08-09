@@ -114,11 +114,46 @@
         <h2>Get in touch with us!</h2>
         <p>Need assistance or have suggestions for our server? Contact us through the form below, and we’ll be in touch shortly!</p>
         <form action="handle_form.php" method="post">
-            <input type="text" name="name" placeholder="Name">
-            <input type="email" name="email" placeholder="Email">
-            <textarea name="message" placeholder="Message"></textarea>
-            <button class="btn" type="submit">Send Message</button>
-          </form>
+            <style>
+                /* Add styles to the form container */
+                .contact-form {
+                  border: 1px solid #ccc;
+                  border-radius: 10px; /* Add border radius */
+                  padding: 20px;
+                  width: 50%; /* Adjust the width to your liking */
+                  margin: 40px auto; /* Center the form horizontally */
+                }
+                /* Add styles to the form elements */
+              
+                .contact-form input, .contact-form textarea {
+                  border: 1px solid #ccc;
+                  border-radius: 5px; /* Add border radius to form elements */
+                  padding: 10px;
+                  margin-bottom: 20px;
+                  width: 100%; /* Make form elements full-width */
+                }
+                /* Add styles to the submit button */
+              
+                .contact-form button[type="submit"] {
+                  background-color: #4CAF50; /* Change button background color */
+                  color: #fff; /* Change button text color */
+                  padding: 10px 20px;
+                  border: none;
+                  border-radius: 5px; /* Add border radius to button */
+                  cursor: pointer; /* Change cursor shape on hover */
+                }
+                /* Add font styles to the form */
+                .contact-form {
+                  font-family: Arial, sans-serif; /* Change font family */
+                  font-size: 16px; /* Change font size */
+                }
+              </style>
+              <form class="contact-form" action="contact_form.php" method="post">
+                <input type="text" name="name" placeholder="Name">
+                <input type="email" name="email" placeholder="Email">
+                <textarea name="message" placeholder="Message"></textarea>
+                <button class="btn" type="submit">Send Message</button>
+              </form>
         <span class="close" id="close-modal">&times;</span>
       </div>
     </div>
